@@ -1,25 +1,44 @@
-#include<stdio.h>
+/*
+Title: Fibonacci using Recursion
+Aim: To compute the nth Fibonacci number using recursion.
+
+Algorithm:
+1. If n == 0, return 0
+2. If n == 1, return 1
+3. Otherwise, return fib(n-1) + fib(n-2)
+*/
+
+#include <stdio.h>
+
+// Function to compute Fibonacci
 int fib(int n)
 {
-if(n==0){
-return 0;
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fib(n - 1) + fib(n - 2);
 }
-if(n==1){
-return 1;
-{
-fib(n-1)+fib(n-2);
-return fib(n-1)+fib(n-2)
-}
+
 int main()
 {
-int n,a=0,b=1,c;
-printf("enter n value:");
-scanf("%d",&n);
-if(n<0){
-printf("invalidd entry/n")
+    int n;
+
+    printf("Enter n value: ");
+    scanf("%d", &n);
+
+    if (n < 0)
+    {
+        printf("Invalid entry\n");
+    }
+    else
+    {
+        printf("Fibonacci term is: %d\n", fib(n));
+    }
+
+    return 0;
 }
-printf("fibonacci term is:%d",fib(n));
-return 0;
-}
+
 
 // Code By @saiganesh-A261
